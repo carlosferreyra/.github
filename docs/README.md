@@ -42,14 +42,14 @@ Your GitHub Account/Organization
 │   └── PULL_REQUEST_TEMPLATES/
 │       └── pull_request_template.md
 │
-├── project-a/
+├── new-repo-a/
 │   └── (inherits templates from .github)
 │
-└── project-b/
+└── new-repo-b/
     └── (inherits templates from .github)
 ```
 
-For instance, when someone creates a new issue in `project-a` or `project-b`, they'll automatically see the templates defined in this `.github` repository. If a repository has its own `.github` folder with templates, those will take precedence over these default ones.
+For instance, when someone creates a new issue in `new-repo-a` or `new-repo-b`, they'll automatically see the templates defined in this `.github` repository. If a repository has its own `.github` folder with templates, those will take precedence over these default ones.
 
 ## License
 
