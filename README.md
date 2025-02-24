@@ -30,6 +30,27 @@ Configuration for GitHub Sponsors and other funding platforms.
 
 This repository serves as a central configuration hub for GitHub-specific settings and templates. The templates and configurations here will be automatically applied to repositories within the organization.
 
+## How It Works
+
+When you have a `.github` repository in your organization or user account, GitHub automatically applies its contents as defaults to all your other repositories. Here's an example:
+
+```
+Your GitHub Account/Organization
+├── .github (this repository)
+│   ├── ISSUE_TEMPLATES/
+│   │   └── feature_request.yml
+│   └── PULL_REQUEST_TEMPLATES/
+│       └── pull_request_template.md
+│
+├── project-a/
+│   └── (inherits templates from .github)
+│
+└── project-b/
+    └── (inherits templates from .github)
+```
+
+For instance, when someone creates a new issue in `project-a` or `project-b`, they'll automatically see the templates defined in this `.github` repository. If a repository has its own `.github` folder with templates, those will take precedence over these default ones.
+
 ## License
 
 This project is licensed under the terms specified in the [LICENSE](LICENSE) file.
