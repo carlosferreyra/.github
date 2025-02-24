@@ -5,26 +5,29 @@ This repository contains GitHub-specific configuration files and templates that 
 ## Repository Structure
 
 ```
-.github/
-├── FUNDING.yml                      # Funding and sponsorship configuration
-├── ISSUE_TEMPLATE/                 # Templates for creating new issues
-│   ├── 01-bug_report.md           # Template for bug reports
-│   └── 02-feature_request.md         # Template for feature requests
-└── PULL_REQUEST_TEMPLATE/         # Templates for pull requests
-    └── pull_request_template.md    # Default pull request template
+├── .github/                       # GitHub-specific configurations
+│   ├── ISSUE_TEMPLATE/          # Issue templates directory
+│   │   ├── 01-bug_report.md    # Bug report template
+│   │   ├── 02-feature_request.md # Feature request template
+│   │   ├── 03-new_test_case.md # Test case template
+│   │   └── config.yml          # Issue template configuration
+│   ├── PULL_REQUEST_TEMPLATE/   # PR templates directory
+│   │   └── pull_request_template.md # PR template
+│   └── FUNDING.yml             # Repository funding configuration
+└── docs/                        # Documentation directory
+    ├── CODE_OF_CONDUCT.md      # Community guidelines and expectations
+    ├── LICENSE                 # Project license terms
+    ├── README.md              # This documentation file
+    └── SECURITY.md            # Security policies and guidelines
 ```
 
 ## Contents
 
-### Issue Templates
-- **Bug Report Template**: Structured template for reporting bugs
-- **Feature Request Template**: Template for proposing new features
-
-### Pull Request Template
-A standardized template for creating pull requests, ensuring all necessary information is provided.
-
-### Funding Configuration
-Configuration for GitHub Sponsors and other funding platforms.
+### Documentation
+- **CODE_OF_CONDUCT.md**: Detailed community guidelines and expectations
+- **LICENSE**: Terms under which this project is licensed
+- **README.md**: Main documentation and repository information
+- **SECURITY.md**: Security policies, vulnerability reporting, and guidelines
 
 ## Usage
 
@@ -35,21 +38,20 @@ This repository serves as a central configuration hub for GitHub-specific settin
 When you have a `.github` repository in your organization or user account, GitHub automatically applies its contents as defaults to all your other repositories. Here's an example:
 
 ```
-Your GitHub Account/Organization
-├── .github (this repository)
-│   ├── ISSUE_TEMPLATE/
-│   │   └── feature_request.yml
-│   └── PULL_REQUEST_TEMPLATE/
-│       └── pull_request_template.md
-│
+.github # this repo.
+├── .github
+└── docs/
+    ├── CODE_OF_CONDUCT.md
+    ├── LICENSE
+    ├── README.md
+    └── SECURITY.md
+
 ├── new-repo-a/
-│   └── (inherits templates from .github)
+│   └── (inherits configurations from .github repo)
 │
 └── new-repo-b/
-    └── (inherits templates from .github)
+    └── (inherits configurations from .github repo)
 ```
-
-For instance, when someone creates a new issue in `new-repo-a` or `new-repo-b`, they'll automatically see the templates defined in this `.github` repository. If a repository has its own `.github` folder with templates, those will take precedence over these default ones.
 
 ## License
 
@@ -58,3 +60,7 @@ This project is licensed under the terms specified in the [LICENSE](LICENSE) fil
 ## Code of Conduct
 
 Please review our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the community guidelines and expectations.
+
+## Security
+
+For security-related matters, please refer to our [Security Policy](SECURITY.md).
