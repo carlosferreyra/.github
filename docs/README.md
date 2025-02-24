@@ -37,9 +37,9 @@ When you have a `.github` repository in your organization or user account, GitHu
 ```
 Your GitHub Account/Organization
 ├── .github (this repository)
-│   ├── ISSUE_TEMPLATES/
+│   ├── ISSUE_TEMPLATE/
 │   │   └── feature_request.yml
-│   └── PULL_REQUEST_TEMPLATES/
+│   └── PULL_REQUEST_TEMPLATE/
 │       └── pull_request_template.md
 │
 ├── new-repo-a/
