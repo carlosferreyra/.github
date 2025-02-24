@@ -1,6 +1,6 @@
 ---
-name: Testing issue
-about: Issue template for adding a new test case for the project
+name: Testing case
+about: Add a new Test Case for the project
 title: 'New Test case "X"'
 labels: 'enhancement'
 assignees: 'carlosferreyra'
