@@ -1,11 +1,14 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 📚 GitHub Community Discussions
-    url: https://github.com/carlosferreyra/discussions
+  - name: GitHub Community Support
+    url: https://github.com/orgs/community/discussions
     about: Please ask and answer questions here.
-  - name: 📖 Documentation
-    url: https://github.com/carlosferreyra/docs
-    about: Check our documentation before opening an issue.
-  - name: 💬 Join the Community
-    url: https://github.com/carlosferreyra/community
-    about: Connect with other users and contributors.
+  - name: GitHub Security Bug Bounty
+    url: https://bounty.github.com/
+    about: Please report security vulnerabilities here.
+  - name: GitHub Status
+    url: https://www.githubstatus.com/
+    about: Please check here for service status updates.
+  - name: GitHub Support
+    url: https://support.github.com/
+    about: Please contact GitHub Support directly.
