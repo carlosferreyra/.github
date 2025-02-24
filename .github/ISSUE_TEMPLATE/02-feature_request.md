@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: 'New Proposed Feature "X"'
-labels: ['enhancement','documentation']
-assignees: 'carlosferreyra'
+title: New Proposed Feature "X"
+labels: documentation, enhancement
+assignees: carlosferreyra
 
 ---
 
