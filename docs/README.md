@@ -7,10 +7,10 @@ This repository contains GitHub-specific configuration files and templates that 
 ```
 .github/
 ├── FUNDING.yml                      # Funding and sponsorship configuration
-├── ISSUE_TEMPLATES/                 # Templates for creating new issues
+├── ISSUE_TEMPLATE/                 # Templates for creating new issues
 │   ├── 01-bug_report.md           # Template for bug reports
 │   └── 02-feature_request.md         # Template for feature requests
-└── PULL_REQUEST_TEMPLATES/         # Templates for pull requests
+└── PULL_REQUEST_TEMPLATE/         # Templates for pull requests
     └── pull_request_template.md    # Default pull request template
 ```
 
