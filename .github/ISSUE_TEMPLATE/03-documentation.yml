@@ -1,0 +1,47 @@
+name: 📚 Documentation
+description: Report a problem in the docs or suggest a docs improvement.
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+assignees: ["carlosferreyra"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to report unclear, missing, or incorrect docs.
+
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      description: URL or path to the docs in question.
+      placeholder: README.md / https://…
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong or missing?
+      description: Quote the relevant section if possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: How would you reword, restructure, or extend it?
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of docs change
+      options:
+        - Typo / grammar
+        - Missing information
+        - Outdated information
+        - Confusing explanation
+        - Broken link or example
+        - Other
+    validations:
+      required: true

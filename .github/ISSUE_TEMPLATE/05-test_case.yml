@@ -1,0 +1,75 @@
+name: 🧪 Test case
+description: Propose a new test case to add to the project's test suite.
+title: "[Test]: "
+labels: ["test", "enhancement"]
+assignees: ["carlosferreyra"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose a new test case (unit, integration, or
+        end-to-end) that should be added to the project.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Test case description
+      description: What behavior should this test verify?
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Setup, fixtures, mocks, or dependencies required.
+      placeholder: |
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Test steps
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected results
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Test type
+      options:
+        - Unit
+        - Integration
+        - End-to-end
+        - Performance
+        - Security
+        - Regression
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Test environment
+      placeholder: |
+        - Platform:
+        - Version:
+        - Browser / device (if applicable):
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Related issues, PRs, or design notes.

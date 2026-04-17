@@ -1,0 +1,34 @@
+name: ❓ Question
+description: Ask a question about usage, behavior, or design.
+title: "[Question]: "
+labels: ["question", "needs-triage"]
+assignees: ["carlosferreyra"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For open-ended discussion, prefer
+        [GitHub Discussions](https://github.com/orgs/community/discussions).
+        Use this template only if Discussions are disabled or your question is
+        narrowly scoped to this repository.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      options:
+        - label: I have searched the README, docs, and existing issues.
+          required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What have you tried?
+      description: Share any code, commands, or links that show what you've already explored.

@@ -1,0 +1,35 @@
+title: "[Idea]: "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea you'd like to explore? Use this template to share it.
+        Ideas don't need to be fully baked — that's what discussion is for.
+
+  - type: textarea
+    id: pitch
+    attributes:
+      label: The pitch
+      description: A short, punchy summary of the idea.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this worth doing? What problem does it solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Sketch out how it might work, what it might affect, and any open questions.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
