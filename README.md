@@ -90,7 +90,7 @@ use case.
 | [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) | Default style and behavior guidance for GitHub Copilot / Copilot Chat. **Inherits per-repo only**, not across the org — but I keep it here as a canonical template to copy. | When I bootstrap a new repo, I copy this file in so Copilot suggestions match my house style from day one. |
 | [`.github/dependabot.yml`](./.github/dependabot.yml) | Dependabot config for *this* repo (monthly GitHub Actions updates). Dependabot config is **not inherited** across repos. | Dependabot opens a monthly PR bumping the actions versions used by the workflows in this repo. |
 | [`.github/workflows/`](./.github/workflows/) | GitHub Actions workflows for *this* repo only. Workflows in `.github` are **not** auto-applied to other repos (use [starter workflows](https://docs.github.com/actions/using-workflows/creating-starter-workflows-for-your-organization) for that, which require an org account). | A future workflow here could lint markdown or validate the issue-form YAML on every PR. |
-| [`profile/README.md`](./profile/README.md) | Rendered at <https://github.com/carlosferreyra> as the profile landing page. | A recruiter visits my profile and lands on a curated bio with links instead of just my pinned repos. |
+| [`profile/README.md`](./profile/README.md) | **Organization** profile page source (`<orgname>/.github/profile/README.md`). For *personal* accounts the profile page comes from `<username>/<username>/README.md` instead — see the hierarchy section below. This file is kept here as a synced mirror of [`carlosferreyra/carlosferreyra`](https://github.com/carlosferreyra/carlosferreyra) and would only auto-render if this account became an org. | Kitsune Studios (an org) would render its profile at `KitsuneStudios/.github/profile/README.md`; Carlos's personal profile at `github.com/carlosferreyra` renders from the separate `carlosferreyra/carlosferreyra` repo instead. |
 | [`LICENSE`](./LICENSE) | MIT license for the contents of *this* repo. **License is not inherited** as a fallback — each repo needs its own. | Allows others to reuse the templates and docs in this repo under MIT. |
 | [`README.md`](./README.md) | This file. Index + GitHub docs cheatsheet. | Future-me opens the repo and immediately remembers what every file does. |
 
@@ -147,15 +147,63 @@ Each bullet is a fact you can act on.
 - Repository **labels**, **branch protection**, **secrets**, **rulesets** —
   configured at the repo or org level, not via this file tree.
 
-### Profile README specifics
+### Profile README — full hierarchy
 
-- File path **must be exactly** `profile/README.md` on the **default branch**
-  of a repo named the **same as your username** (`carlosferreyra/.github`)
-  or organization.
-- The repo and the file must be **public**.
-- It renders **above** your pinned repositories on `github.com/<you>`.
-- Supports the same Markdown as a normal README, plus image-based "stats"
-  cards from third parties.
+The path that renders at `github.com/carlosferreyra` depends on whether the
+account is a **personal user** or an **organization**. They use different
+mechanisms.
+
+#### Personal user account (how `carlosferreyra` works today)
+
+| Candidate path | Does it render as the profile page? |
+| -------------- | ----------------------------------- |
+| `carlosferreyra/carlosferreyra/README.md` | ✅ **Yes** — the only path GitHub reads for a personal profile. |
+| `carlosferreyra/carlosferreyra/profile/README.md` | ❌ No — GitHub only looks at the **root** README of the profile repo. |
+| `carlosferreyra/.github/profile/README.md` *(this file)* | ❌ No — `profile/README.md` inside a `.github` repo is for **organizations only**, not personal accounts. |
+| `carlosferreyra/.github/README.md` | ❌ No — that's just this repo's own README, not a profile. |
+
+**Rule for personal accounts:** create a public repo named **exactly** your
+username (`carlosferreyra/carlosferreyra`), put `README.md` at the **root**.
+GitHub renders it above your pinned repos at `github.com/<username>`. No other
+path triggers this behavior.
+
+#### Organization account (how it would work for e.g. `KitsuneStudios`)
+
+| Candidate path | Does it render as the org profile page? |
+| -------------- | --------------------------------------- |
+| `KitsuneStudios/.github/profile/README.md` | ✅ **Yes** — the only path GitHub reads for a public org profile. |
+| `KitsuneStudios/.github/README.md` | ❌ No — that's the `.github` repo's own README. |
+| `KitsuneStudios/KitsuneStudios/README.md` | ❌ No — orgs cannot create a repo named the same as the org (the username namespace is reserved). |
+
+**Rule for organizations:** in the org's `.github` repo, put
+`profile/README.md` on the default branch and make the repo public.
+
+#### Summary table
+
+| What you see at `github.com/X` | Source file |
+| ------------------------------- | ----------- |
+| Personal user profile (`X` = username) | `X/X/README.md` *(root of the profile repo)* |
+| Organization profile (`X` = org) | `X/.github/profile/README.md` |
+
+#### Why `profile/README.md` still lives in this repo
+
+- It is a **synced copy** of `carlosferreyra/carlosferreyra/README.md` — a
+  single source of truth to copy from when updating the real profile repo.
+- If `carlosferreyra` is ever converted to or mirrored as an org, the file is
+  already in the right place.
+- It does **not** render anywhere automatically for a personal account.
+
+#### Other profile README facts
+
+- The profile repo (`carlosferreyra/carlosferreyra`) and its README must be
+  **public** to show on the profile page.
+- The README renders **above** pinned repos and the contribution graph.
+- Supports all GitHub-flavored Markdown, HTML, and third-party image-based
+  stats cards (e.g., `github-readme-stats`, `github-readme-activity-graph`).
+- Relative links (e.g., `resume/carlos-ferreyra.pdf`) resolve against the
+  **profile repo** (`carlosferreyra/carlosferreyra`), not this `.github` repo.
+  A copy of the same README here would have broken relative links unless they
+  are converted to absolute URLs.
 
 ### Issue forms (`.yml`) vs. legacy templates (`.md`)
 
