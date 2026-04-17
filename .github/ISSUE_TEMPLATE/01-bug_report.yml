@@ -1,0 +1,95 @@
+name: 🐛 Bug report
+description: Report a reproducible bug or unexpected behavior.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: ["carlosferreyra"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report! Please fill out the
+        sections below so we can reproduce the issue quickly.
+
+        Before submitting, please **search existing issues** to make sure this
+        hasn't already been reported.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      options:
+        - label: I have searched the existing issues and this is not a duplicate.
+          required: true
+        - label: I have read the project's README and relevant docs.
+          required: true
+        - label: I am using the latest released version (or `main`).
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of the bug.
+      placeholder: When I do X, Y happens instead of Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, deterministic steps. Include code, commands, or a link to a repo.
+      placeholder: |
+        1. Go to '...'
+        2. Run '...'
+        3. Observe '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: I expected …
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include error messages, stack traces, or screenshots.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit SHA
+      placeholder: v1.2.3 or 9abcdef
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other / N/A
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Additional environment
+      description: Runtime versions (Node, Python, Go, browser, etc.), config flags, hardware notes.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else that might help — logs, related issues, hypotheses.

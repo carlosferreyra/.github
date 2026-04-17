@@ -1,136 +1,95 @@
-# .github Configuration Repository
+# Carlos E. Ferreyra
 
-> **Note**: This repository has been enhanced with additional content to test GitHub Copilot
-> functionality (Issue #2).
+> Software Engineer & Developer
 
-This repository contains GitHub-specific configuration files and templates that can be used across
-multiple repositories in the organization.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail)](mailto:eduferreyraok@gmail.com)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=flat-square&logo=twitter)](https://twitter.com/eduferreyraok)
+[![GitHub followers](https://img.shields.io/github/followers/carlosferreyra?label=Follow&style=flat-square&logo=github)](https://github.com/carlosferreyra)
+![Profile views](https://komarev.com/ghpvc/?username=carlosferreyra&style=flat-square)
 
-## Repository Structure
+## About Me
 
-```
-├── .github/                       # GitHub-specific configurations
-│   ├── ISSUE_TEMPLATE/          # Issue templates directory
-│   │   ├── 01-bug_report.md    # Bug report template
-│   │   ├── 02-feature_request.md # Feature request template
-│   │   ├── 03-new_test_case.md # Test case template
-│   │   └── config.yml          # Issue template configuration
-│   ├── PULL_REQUEST_TEMPLATE/   # PR templates directory
-│   │   └── pull_request_template.md # PR template
-│   └── FUNDING.yml             # Repository funding configuration
-└── docs/                        # Documentation directory
-    ├── CODE_OF_CONDUCT.md      # Community guidelines and expectations
-    ├── LICENSE                 # Project license terms
-    ├── README.md              # This documentation file
-    └── SECURITY.md            # Security policies and guidelines
-```
+Software Developer/Engineer with a passion for solving complex problems through elegant code. Experienced in backend development, API design, process automation, and data engineering.
 
-## Contents
+- 🔭 Working on: [Kitsune Studios](https://github.com/Kitsune-Studios) &
+  [Datos Argentina](https://github.com/argendata)
+- 🎓 Senior student at [Faculty of System Engineering](https://www.frre.utn.edu.ar/isi),
+  [National Technological University](https://www.utn.edu.ar/)
+- 👨‍💻 Competitive programmer on [LeetCode](https://leetcode.com/u/Coolwinter18/)
+- 📄 Resume: [PDF](resume/carlos-ferreyra.pdf)
+- 🌐 Portfolio: [carlosferreyra.com.ar](https://carlosferreyra.com.ar)
+- 📍 Based in Argentina
 
-### Documentation
+## Technical Skills
 
-- **CODE_OF_CONDUCT.md**: Detailed community guidelines and expectations
-- **LICENSE**: Terms under which this project is licensed
-- **README.md**: Main documentation and repository information
-- **SECURITY.md**: Security policies, vulnerability reporting, and guidelines
-
-## Usage
-
-This repository serves as a central configuration hub for GitHub-specific settings and templates.
-The templates and configurations here will be automatically applied to repositories within the
-organization.
-
-## How It Works
-
-When you have a `.github` repository in your organization or user account, GitHub automatically
-applies its contents as defaults to all your other repositories. Here's an example:
-
-```
-.github # this repo.
-├── .github
-└── docs/
-    ├── CODE_OF_CONDUCT.md
-    ├── LICENSE
-    ├── README.md
-    └── SECURITY.md
-
-├── new-repo-a/
-│   └── (inherits configurations from .github repo)
-│
-└── new-repo-b/
-    └── (inherits configurations from .github repo)
+```bash
+Languages:               Python, Java, JavaScript, TypeScript, Rust
+Cloud:                   GCP, AWS
+Databases:               MySQL, MongoDB, SQLite
+DevOps & Infra:          Docker, CI/CD, Git, Linux
+Frameworks:              Django, Web APIs, REST
 ```
 
-## License
+## Professional Experience
 
-This project is licensed under the terms specified in the [LICENSE](LICENSE) file.
+- **Software Engineer** | UTN - FRRe | March 2024 - Dec 2024
+  - Worked in a team of 6+ people building an ED Platform that helped automate tasks, optimize processes, and maximize productivity
+  - Designed and implemented a scalable server architecture and automated workflows to support hundreds of users
+  - Collaborated with the financial department to streamline operational processes, resulting in a 10% reduction in costs and a 50% increase in efficiency
 
-## Testing Section - Copilot Demo
+- **Backend Engineer** | Devlights S.R.L | March 2021 - Sep 2021
+  - Collaborated with a team of 4+ interns and mentors to develop a website for an ISP company
+  - Implemented a REST-API to automate data collection of the customer
+  - Gained hands-on experience with Python, Git, Django, Web APIs and applied them to a web application
 
-This section has been added to test GitHub Copilot functionality as requested in issue #2.
+## Education
 
-### Sample Content
+- **Information System's Engineering** | Universidad Tecnologica Nacional, Argentina | 2015 - 2024
+  - Relevant coursework: Data Structures, Algorithms, Software Engineering, Databases
 
-Here are some example configurations and use cases:
+## Projects
 
-#### Example Workflow Templates
+- [Personal Website](https://www.carlosferreyra.com.ar/) - Personal Website Landing Page
+- [LeetCode Solutions](https://github.com/carlosferreyra/leetcode) - Problem submissions from my LeetCode profile
+- [Kitsune Studios](https://github.com/Kitsune-Studios) - Open source projects and experiments
+- [Datos Argentina](https://github.com/argendata) - Data engineering projects for Argentine public data
 
-- **CI/CD Pipeline**: Automated testing and deployment workflows
-- **Issue Management**: Automated labeling and assignment rules
-- **Code Quality**: Linting, formatting, and security scanning
+## Certifications
 
-#### Best Practices
+- [Databricks Data Engineer Associate (2025)](https://credentials.databricks.com/profile/carlosferreyra/wallet)
+- [SQL Advanced (2025)](https://www.kaggle.com/learn/certification/eduferreyraok/advanced-sql)
+- [MongoDB - Database Administration (2025)](https://learn.mongodb.com/c/OE3lXL2WRfa33hpCBtCwEQ)
+- [Oracle Next Education Program (2025)](https://app.aluracursos.com/program/certificate/4fd8c5a8-9a27-4d31-b4e5-0ddc4a739e51)
+- [Amazon Cloud Practitioner Essentials (2024)](https://drive.google.com/file/d/1NqapZG2uenlclXVaJOKurjd5H_WZNHMW/view)
+- [Google Associate Cloud Engineer (2024)](https://www.credly.com/badges/6347777b-1952-426b-95f0-daadbaccf8e0/linked_in_profile)
 
-1. **Template Consistency**: Ensure all issue and PR templates follow the same format
-2. **Clear Documentation**: Provide comprehensive documentation for all configurations
-3. **Regular Updates**: Keep templates and configurations up to date with GitHub's latest features
-4. **Community Guidelines**: Maintain clear and welcoming community standards
+## GitHub Stats
 
-#### Sample Code Block
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=carlosferreyra&layout=compact&theme=dark&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=carlosferreyra&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
+</div>
 
-```yaml
-# Example GitHub Actions workflow
-name: Test Workflow
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=carlosferreyra&bg_color=151515&color=ffffff&line=4c8eda&point=1f6feb&area=true&hide_border=true" alt="Activity Graph" width="98%" />
+</div>
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run tests
-        run: echo "Testing Copilot integration"
-```
+## Let's Connect
 
-### Integration Examples
+I'm currently open to new opportunities! Feel free to reach out to discuss potential collaborations
+or just to connect.
 
-This repository can be integrated with various tools and services:
-
-- **GitHub Actions**: Automated workflows and CI/CD
-- **GitHub Apps**: Custom applications and integrations
-- **Webhooks**: Real-time event notifications
-- **API Integration**: Custom scripts and automation
-
-### Dummy Data for Testing
-
-| Feature               | Status    | Priority |
-| --------------------- | --------- | -------- |
-| Issue Templates       | ✅ Active | High     |
-| PR Templates          | ✅ Active | High     |
-| Security Policy       | ✅ Active | Medium   |
-| Funding Configuration | ✅ Active | Low      |
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/eduferreyraok)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:eduferreyraok@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me)](https://carlosferreyra.com.ar)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/carlosferreyra)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/Coolwinter18/)
+[![Credly](https://img.shields.io/badge/Credly-FF6B00?style=for-the-badge&logo=credly&logoColor=white)](https://www.credly.com/users/eduferreyraok)
+[![Google Dev](https://img.shields.io/badge/Google_Dev-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://www.cloudskillsboost.google/public_profiles/326c1a3d-6ac7-4036-b07f-c29bd0be6132)
 
 ---
 
-## Code of Conduct
-
-Please review our [Code of Conduct](CODE_OF_CONDUCT.md) to understand the community guidelines and
-expectations.
-
-## Security
-
-For security-related matters, please refer to our [Security Policy](SECURITY.md).
+<div align="center">
+  <sub><sup>© 2025 Carlos Ferreyra - MIT License</sup></sub>
+</div>
