@@ -2,19 +2,20 @@
 
 This is a **special "magic" repository** owned by
 [@carlosferreyra](https://github.com/carlosferreyra). GitHub treats a
-repository named `.github` as the source of truth for two things:
-
-1. **Default community health files** — `CODE_OF_CONDUCT`, `CONTRIBUTING`,
-   `SECURITY`, `SUPPORT`, `GOVERNANCE`, `FUNDING.yml`, issue / PR / discussion
-   templates — that any of my other repositories will inherit if they don't
-   ship their own.
-2. **The profile page README** rendered at
-   <https://github.com/carlosferreyra>, sourced from
-   [`profile/README.md`](./profile/README.md).
+repository named `.github` under a user account as the source of truth for
+**default community health files** — `CODE_OF_CONDUCT`, `CONTRIBUTING`,
+`SECURITY`, `SUPPORT`, `GOVERNANCE`, `FUNDING.yml`, issue / PR / discussion
+templates — that any of my other repositories will inherit if they don't
+ship their own.
 
 > ⚠️ **Inheritance caveat:** community health fallbacks only apply when the
 > consuming repo is **public** *and* doesn't already define its own copy of
 > the file. They are not "merged" — it's all-or-nothing per file.
+>
+> ℹ️ **No profile README here:** for a **personal** account like this one,
+> the profile page at <https://github.com/carlosferreyra> is rendered from
+> `carlosferreyra/carlosferreyra/README.md`, **not** from this repo. The
+> `profile/README.md` path only works for **organization** accounts.
 
 ---
 
@@ -44,8 +45,6 @@ repository named `.github` as the source of truth for two things:
 │   │   ├── q-and-a.yml
 │   │   └── show-and-tell.yml
 │   └── workflows/              # GitHub Actions for *this* repo only
-├── profile/
-│   └── README.md               # Renders on https://github.com/carlosferreyra
 ├── LICENSE
 └── README.md                   # You are here
 ```
@@ -90,7 +89,6 @@ use case.
 | [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) | Default style and behavior guidance for GitHub Copilot / Copilot Chat. **Inherits per-repo only**, not across the org — but I keep it here as a canonical template to copy. | When I bootstrap a new repo, I copy this file in so Copilot suggestions match my house style from day one. |
 | [`.github/dependabot.yml`](./.github/dependabot.yml) | Dependabot config for *this* repo (monthly GitHub Actions updates). Dependabot config is **not inherited** across repos. | Dependabot opens a monthly PR bumping the actions versions used by the workflows in this repo. |
 | [`.github/workflows/`](./.github/workflows/) | GitHub Actions workflows for *this* repo only. Workflows in `.github` are **not** auto-applied to other repos (use [starter workflows](https://docs.github.com/actions/using-workflows/creating-starter-workflows-for-your-organization) for that, which require an org account). | A future workflow here could lint markdown or validate the issue-form YAML on every PR. |
-| [`profile/README.md`](./profile/README.md) | **Organization** profile page source (`<orgname>/.github/profile/README.md`). For *personal* accounts the profile page comes from `<username>/<username>/README.md` instead — see the hierarchy section below. This file is kept here as a synced mirror of [`carlosferreyra/carlosferreyra`](https://github.com/carlosferreyra/carlosferreyra) and would only auto-render if this account became an org. | Kitsune Studios (an org) would render its profile at `KitsuneStudios/.github/profile/README.md`; Carlos's personal profile at `github.com/carlosferreyra` renders from the separate `carlosferreyra/carlosferreyra` repo instead. |
 | [`LICENSE`](./LICENSE) | MIT license for the contents of *this* repo. **License is not inherited** as a fallback — each repo needs its own. | Allows others to reuse the templates and docs in this repo under MIT. |
 | [`README.md`](./README.md) | This file. Index + GitHub docs cheatsheet. | Future-me opens the repo and immediately remembers what every file does. |
 
@@ -136,7 +134,12 @@ Each bullet is a fact you can act on.
 ### What is **NOT** inherited
 
 - `LICENSE` — every repo needs its own.
-- `README.md` — except `profile/README.md`, which is the user/org profile.
+- `README.md` — the top-level repo README is never inherited.
+- `profile/README.md` — **does not apply to personal accounts.** It only
+  renders for **organization** accounts (at
+  `<org>/.github/profile/README.md`). Personal account profile pages come from
+  `<username>/<username>/README.md` instead, which lives in a separate repo
+  and is not inherited.
 - `.github/workflows/*.yml` — workflows run only in the repo they live in.
   For org-wide reusable workflows, use **starter workflows** under
   `workflow-templates/` in the **org-level** `.github` repo (orgs only, not
@@ -147,63 +150,25 @@ Each bullet is a fact you can act on.
 - Repository **labels**, **branch protection**, **secrets**, **rulesets** —
   configured at the repo or org level, not via this file tree.
 
-### Profile README — full hierarchy
+### Profile README — where it actually lives
 
-The path that renders at `github.com/carlosferreyra` depends on whether the
-account is a **personal user** or an **organization**. They use different
-mechanisms.
-
-#### Personal user account (how `carlosferreyra` works today)
+For the personal account `carlosferreyra`, **no file in this repo renders as
+the profile page.** GitHub only reads one path for personal profiles:
 
 | Candidate path | Does it render as the profile page? |
 | -------------- | ----------------------------------- |
 | `carlosferreyra/carlosferreyra/README.md` | ✅ **Yes** — the only path GitHub reads for a personal profile. |
-| `carlosferreyra/carlosferreyra/profile/README.md` | ❌ No — GitHub only looks at the **root** README of the profile repo. |
-| `carlosferreyra/.github/profile/README.md` *(this file)* | ❌ No — `profile/README.md` inside a `.github` repo is for **organizations only**, not personal accounts. |
-| `carlosferreyra/.github/README.md` | ❌ No — that's just this repo's own README, not a profile. |
+| `carlosferreyra/.github/profile/README.md` | ❌ No — `profile/README.md` inside a `.github` repo is for **organizations only**. |
+| `carlosferreyra/.github/README.md` | ❌ No — that's just this repo's own README. |
 
 **Rule for personal accounts:** create a public repo named **exactly** your
 username (`carlosferreyra/carlosferreyra`), put `README.md` at the **root**.
-GitHub renders it above your pinned repos at `github.com/<username>`. No other
-path triggers this behavior.
-
-#### Organization account (how it would work for e.g. `KitsuneStudios`)
-
-| Candidate path | Does it render as the org profile page? |
-| -------------- | --------------------------------------- |
-| `KitsuneStudios/.github/profile/README.md` | ✅ **Yes** — the only path GitHub reads for a public org profile. |
-| `KitsuneStudios/.github/README.md` | ❌ No — that's the `.github` repo's own README. |
-| `KitsuneStudios/KitsuneStudios/README.md` | ❌ No — orgs cannot create a repo named the same as the org (the username namespace is reserved). |
+That's the only mechanism for a personal profile page. This `.github` repo
+intentionally does **not** carry a `profile/README.md`, since it would never
+render anywhere for a personal account.
 
 **Rule for organizations:** in the org's `.github` repo, put
 `profile/README.md` on the default branch and make the repo public.
-
-#### Summary table
-
-| What you see at `github.com/X` | Source file |
-| ------------------------------- | ----------- |
-| Personal user profile (`X` = username) | `X/X/README.md` *(root of the profile repo)* |
-| Organization profile (`X` = org) | `X/.github/profile/README.md` |
-
-#### Why `profile/README.md` still lives in this repo
-
-- It is a **synced copy** of `carlosferreyra/carlosferreyra/README.md` — a
-  single source of truth to copy from when updating the real profile repo.
-- If `carlosferreyra` is ever converted to or mirrored as an org, the file is
-  already in the right place.
-- It does **not** render anywhere automatically for a personal account.
-
-#### Other profile README facts
-
-- The profile repo (`carlosferreyra/carlosferreyra`) and its README must be
-  **public** to show on the profile page.
-- The README renders **above** pinned repos and the contribution graph.
-- Supports all GitHub-flavored Markdown, HTML, and third-party image-based
-  stats cards (e.g., `github-readme-stats`, `github-readme-activity-graph`).
-- Relative links (e.g., `resume/carlos-ferreyra.pdf`) resolve against the
-  **profile repo** (`carlosferreyra/carlosferreyra`), not this `.github` repo.
-  A copy of the same README here would have broken relative links unless they
-  are converted to absolute URLs.
 
 ### Issue forms (`.yml`) vs. legacy templates (`.md`)
 
@@ -255,7 +220,6 @@ path triggers this behavior.
 ### Useful GitHub docs links
 
 - [About community health files](https://docs.github.com/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
-- [Managing your profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)
 - [Configuring issue templates](https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 - [Syntax for issue forms](https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms)
 - [Discussion category forms](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-category-forms-for-discussions)
