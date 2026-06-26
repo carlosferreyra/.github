@@ -1,17 +1,1 @@
 blank_issues_enabled: false
-contact_links:
-  - name: 💬 GitHub Discussions
-    url: https://github.com/orgs/community/discussions
-    about: Ask open-ended questions and discuss ideas with the community.
-  - name: 🛡️ Report a security vulnerability
-    url: https://github.com/carlosferreyra/.github/security/advisories/new
-    about: Please report security issues privately via GitHub Security Advisories.
-  - name: 🪲 GitHub Security Bug Bounty
-    url: https://bounty.github.com/
-    about: For vulnerabilities in GitHub itself (not this repo).
-  - name: 📈 GitHub Status
-    url: https://www.githubstatus.com/
-    about: Check whether GitHub is having an outage.
-  - name: 🆘 GitHub Support
-    url: https://support.github.com/
-    about: Contact GitHub Support directly.

@@ -1,8 +1,6 @@
 name: 📚 Documentation
 description: Report a problem in the docs or suggest a docs improvement.
 title: "[Docs]: "
-labels: ["documentation", "needs-triage"]
-assignees: ["carlosferreyra"]
 body:
   - type: markdown
     attributes:

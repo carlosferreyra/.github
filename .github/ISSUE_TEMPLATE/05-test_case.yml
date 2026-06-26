@@ -1,8 +1,6 @@
 name: 🧪 Test case
 description: Propose a new test case to add to the project's test suite.
 title: "[Test]: "
-labels: ["test", "enhancement"]
-assignees: ["carlosferreyra"]
 body:
   - type: markdown
     attributes:

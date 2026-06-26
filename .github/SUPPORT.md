@@ -15,7 +15,7 @@ own `SUPPORT.md`.
 
 | I want to…                        | Go here                                                                           |
 | --------------------------------- | --------------------------------------------------------------------------------- |
-| Ask a usage question              | Open a [GitHub Discussion](https://github.com/orgs/community/discussions) or a `question` issue |
+| Ask a usage question              | Use the repository's Discussions tab, when enabled, or open a `question` issue |
 | Report a reproducible bug         | Open a [bug report](./ISSUE_TEMPLATE/01-bug_report.yml)                           |
 | Request a new feature             | Open a [feature request](./ISSUE_TEMPLATE/02-feature_request.yml)                 |
 | Report a security vulnerability   | Follow the [Security Policy](./SECURITY.md) — **do not** open a public issue      |
