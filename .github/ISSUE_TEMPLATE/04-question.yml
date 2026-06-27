@@ -1,16 +1,13 @@
 name: ❓ Question
 description: Ask a question about usage, behavior, or design.
 title: "[Question]: "
-labels: ["question", "needs-triage"]
-assignees: ["carlosferreyra"]
 body:
   - type: markdown
     attributes:
       value: |
-        For open-ended discussion, prefer
-        [GitHub Discussions](https://github.com/orgs/community/discussions).
-        Use this template only if Discussions are disabled or your question is
-        narrowly scoped to this repository.
+        If this repository has Discussions enabled, prefer its Discussions tab
+        for open-ended questions. Use this form for a focused question about
+        this project.
 
   - type: checkboxes
     id: preflight

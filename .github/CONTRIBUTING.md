@@ -17,7 +17,8 @@ uphold this code. Please report unacceptable behavior to
 - **Report a bug** using the [bug report template](./ISSUE_TEMPLATE/01-bug_report.yml).
 - **Request a feature** using the [feature request template](./ISSUE_TEMPLATE/02-feature_request.yml).
 - **Improve documentation** using the [documentation template](./ISSUE_TEMPLATE/03-documentation.yml).
-- **Ask a question** via [Discussions](https://github.com/orgs/community/discussions) or the [question template](./ISSUE_TEMPLATE/04-question.yml).
+- **Ask a question** in the repository's Discussions tab, when enabled, or use
+  the [question template](./ISSUE_TEMPLATE/04-question.yml).
 - **Submit a pull request** following the workflow below.
 
 ## Development workflow
