@@ -1,7 +1,4 @@
----
-layout: default
-title: Pull request template
----
+# Pull request template
 
 `.github/PULL_REQUEST_TEMPLATE.md` pre-populates the body of a new pull request
 when a repository does not provide its own template.

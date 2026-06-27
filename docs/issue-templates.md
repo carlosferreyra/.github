@@ -1,7 +1,4 @@
----
-layout: default
-title: Issue templates
----
+# Issue templates
 
 The default issue forms live in `.github/ISSUE_TEMPLATE/`:
 

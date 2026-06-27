@@ -1,7 +1,4 @@
----
-layout: default
-title: GitHub Repository Templates
----
+# GitHub repository templates
 
 This guide explains how the files in `carlosferreyra/.github` become defaults
 for other public repositories owned by the same account. It focuses on what to

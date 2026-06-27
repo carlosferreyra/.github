@@ -1,7 +1,4 @@
----
-layout: default
-title: Repository operations
----
+# Repository operations
 
 ## Bootstrap a public repository
 
@@ -30,7 +27,7 @@ Run structural checks before merging template changes:
 ```bash
 # YAML syntax
 ruby -e 'require "yaml"; ARGV.each { |f| YAML.load_file(f) }' \
-  .github/**/*.yml docs/_config.yml
+  .github/**/*.yml
 
 # Markdown links, using your preferred link checker
 npx --yes markdown-link-check README.md docs/*.md
@@ -45,17 +42,18 @@ repository settings are enabled.
 
 ## Publish these docs with GitHub Pages
 
-The `docs/` directory is ready for branch-based GitHub Pages with Jekyll.
+The `docs/` directory is a plain Markdown source tree and requires no
+repository-local build configuration.
 
-1. Open **Settings > Pages** in `carlosferreyra/.github`.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select `main` and `/docs`.
-4. Save and wait for the Pages workflow to finish.
-5. Open `https://carlosferreyra.github.io/.github/`.
+1. Configure the existing Pages publishing workflow to use `docs/` as its
+   source directory.
+2. Use `docs/index.md` as the documentation entry page.
+3. Preserve the directory structure so relative `.md` links keep working.
+4. Publish with the same plain-Markdown renderer used by the other projects.
+5. Verify navigation from the deployed index to every guide.
 
-The site uses `docs/index.md` as its entry page and `docs/_config.yml` for the
-supported `minima` theme. GitHub Pages deployment is a repository setting and
-is not inherited by other repositories.
+GitHub Pages configuration and deployment workflows are repository settings;
+they are not inherited through this `.github` repository.
 
 ## Change review checklist
 

@@ -1,7 +1,4 @@
----
-layout: default
-title: Discussion templates
----
+# Discussion templates
 
 Discussion category forms live in `.github/DISCUSSION_TEMPLATE/`. This
 repository supplies forms for ideas, questions and answers, and show-and-tell

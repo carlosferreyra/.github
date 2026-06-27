@@ -1,7 +1,4 @@
----
-layout: default
-title: Inheritance and precedence
----
+# Inheritance and precedence
 
 ## Requirements
 

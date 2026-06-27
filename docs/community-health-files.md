@@ -1,7 +1,4 @@
----
-layout: default
-title: Community health files
----
+# Community health files
 
 ## `CODE_OF_CONDUCT.md`
 
